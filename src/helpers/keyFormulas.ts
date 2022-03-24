@@ -1,24 +1,55 @@
-const keyFormulas = () => {
-  const notes = [
-    "A",
-    "A#",
-    "B",
-    "C",
-    "C#",
-    "D",
-    "D#",
-    "E",
-    "F",
-    "F#",
-    "G",
-    "G#",
-  ];
+const flatNotes = [
+  "A",
+  "Bb",
+  "B",
+  "C",
+  "Db",
+  "D",
+  "Eb",
+  "E",
+  "F",
+  "Gb",
+  "G",
+  "Ab",
+];
 
-  // Vamos a necesitar el indice del primer grado para jugar con eso
-  const firstGradeIndex = (note: string) => notes.findIndex((e) => e === note);
-  // Funcion para pillar el indice de cada grado
+const sharpNotes = [
+  "A",
+  "A#",
+  "B",
+  "C",
+  "C#",
+  "D",
+  "D#",
+  "E",
+  "F",
+  "F#",
+  "G",
+  "G#",
+];
+
+const keyFormulas = () => {
+  // Function to filter if the notes are flat or sharp
+  const filterNotes = (note: string) => {
+    // Determine if the notes array are sharps or flats
+    if (note.includes("b")) {
+      return flatNotes;
+    } else {
+      return sharpNotes;
+    }
+  };
+  // Function to get the first grade position
+  const firstGradeIndex = (note: string) => {
+    const notes = filterNotes(note);
+    return notes.findIndex((e) => e === note);
+  };
+  // Function to get the index of any grade
   const getGradeIndex = (distance: number, note: string) => {
+    // Const with the Index of the grade
     const gradeIndex = distance + firstGradeIndex(note);
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
+    // If to go back to the first element of the array if there are no elements left
     if (gradeIndex >= notes.length) {
       return gradeIndex - notes.length;
     } else {
@@ -27,6 +58,8 @@ const keyFormulas = () => {
   };
 
   const convertToMajorKey = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     // la tonica o primer grado es la nota que recibe mediante parametro
     const firstGrade = note;
     // El segundo grado esta a un tono de distancia, por lo que debemos sumar 2 al indice del array
@@ -55,6 +88,8 @@ const keyFormulas = () => {
 
   // Funcion que devuelve la tonalidad menor de una nota
   const convertToMinorKey = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     // la tonica o primer grado es la nota que recibe mediante parametro
     const firstGrade = note;
     // El segundo grado esta a un tono de distancia, por lo que debemos sumar 2 al indice del array
@@ -85,6 +120,9 @@ const keyFormulas = () => {
   const getIonianScale = (note: string) => convertToMajorKey(note);
 
   const getDorianScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
+
     const scale = [
       note,
       notes[getGradeIndex(2, note)],
@@ -98,6 +136,8 @@ const keyFormulas = () => {
   };
 
   const getPhrygianScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = flatNotes;
     const scale = [
       note,
       notes[getGradeIndex(1, note)],
@@ -111,6 +151,8 @@ const keyFormulas = () => {
   };
 
   const getLydianScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     const scale = [
       note,
       notes[getGradeIndex(2, note)],
@@ -124,6 +166,8 @@ const keyFormulas = () => {
   };
 
   const getMixolydianScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     const scale = [
       note,
       notes[getGradeIndex(2, note)],
@@ -137,6 +181,8 @@ const keyFormulas = () => {
   };
 
   const getAeoliancScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = flatNotes;
     const scale = [
       note,
       notes[getGradeIndex(2, note)],
@@ -150,6 +196,8 @@ const keyFormulas = () => {
   };
 
   const getLocrianScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = flatNotes;
     const scale = [
       note,
       notes[getGradeIndex(1, note)],
@@ -186,6 +234,8 @@ const keyFormulas = () => {
   };
 
   const getDiminishedTriadChord = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     const chord = [
       note,
       " ",
@@ -225,6 +275,8 @@ const keyFormulas = () => {
   };
 
   const getSeventh = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     const chord = [
       note,
       " ",
@@ -238,6 +290,8 @@ const keyFormulas = () => {
   };
 
   const getSemiDiminished = (note: string) => {
+    // Const with the notes array filtered
+    const notes = filterNotes(note);
     const chord = [
       note,
       " ",
