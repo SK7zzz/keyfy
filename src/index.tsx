@@ -3,9 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
+import keyReducer from "./redux/features/KeyState";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    keyState: keyReducer,
+  },
 });
 ReactDOM.render(
   <React.StrictMode>
