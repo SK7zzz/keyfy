@@ -117,7 +117,14 @@ const keyFormulas = () => {
   };
 
   // Funciones para las escalas diatonicas
-  const getIonianScale = (note: string) => convertToMajorKey(note);
+  const getIonianScale = (note: string) => {
+    return {
+      otherNames: "Major, Ionian",
+      notes: convertToMajorKey(note),
+      intervals: ["1P", "2M", "3M", "4P", "5P", "6M", "7M"],
+      semitones: [2, 2, 1, 2, 2, 2, 1],
+    };
+  };
 
   const getDorianScale = (note: string) => {
     // Const with the notes array filtered
@@ -132,7 +139,12 @@ const keyFormulas = () => {
       notes[getGradeIndex(9, note)],
       notes[getGradeIndex(10, note)],
     ];
-    return scale;
+    return {
+      otherNames: "Dorian, Kafi theta",
+      notes: scale,
+      intervals: ["1P", "2M", "3m", "4P", "5P", "6M", "7m"],
+      semitones: [2, 1, 2, 2, 2, 1, 2],
+    };
   };
 
   const getPhrygianScale = (note: string) => {
@@ -147,7 +159,12 @@ const keyFormulas = () => {
       notes[getGradeIndex(8, note)],
       notes[getGradeIndex(10, note)],
     ];
-    return scale;
+    return {
+      otherNames: "Phrygian, Neopolitan minor",
+      notes: scale,
+      intervals: ["1P", "2m", "3m", "4P", "5P", "6m", "7m"],
+      semitones: [1, 2, 2, 2, 1, 2, 2],
+    };
   };
 
   const getLydianScale = (note: string) => {
@@ -162,7 +179,12 @@ const keyFormulas = () => {
       notes[getGradeIndex(9, note)],
       notes[getGradeIndex(11, note)],
     ];
-    return scale;
+    return {
+      otherNames: "Lydian, Kalyan theta",
+      notes: scale,
+      intervals: ["1P", "2M", "3M", "4A", "5P", "6M", "7M"],
+      semitones: [2, 2, 2, 1, 2, 2, 1],
+    };
   };
 
   const getMixolydianScale = (note: string) => {
@@ -177,7 +199,12 @@ const keyFormulas = () => {
       notes[getGradeIndex(9, note)],
       notes[getGradeIndex(10, note)],
     ];
-    return scale;
+    return {
+      otherNames: "Mixolydian, Dominant 7th, Khamaj theta",
+      notes: scale,
+      intervals: ["1P", "2M", "3M", "4A", "5P", "6M", "7m"],
+      semitones: [2, 2, 1, 2, 2, 1, 2],
+    };
   };
 
   const getAeoliancScale = (note: string) => {
@@ -192,7 +219,12 @@ const keyFormulas = () => {
       notes[getGradeIndex(8, note)],
       notes[getGradeIndex(10, note)],
     ];
-    return scale;
+    return {
+      otherNames: "Aeolian, Minor(natural), Asavari theta",
+      notes: scale,
+      intervals: ["1P", "2M", "3m", "4A", "5P", "6m", "7m"],
+      semitones: [2, 1, 2, 2, 1, 2, 2],
+    };
   };
 
   const getLocrianScale = (note: string) => {
@@ -207,7 +239,12 @@ const keyFormulas = () => {
       notes[getGradeIndex(8, note)],
       notes[getGradeIndex(10, note)],
     ];
-    return scale;
+    return {
+      otherNames: "Locrian, Half diminished",
+      notes: scale,
+      intervals: ["1P", "2m", "3m", "4P", "5d", "6m", "7m"],
+      semitones: [1, 2, 2, 1, 2, 2, 2],
+    };
   };
 
   // Funciones para las triadas
@@ -219,7 +256,12 @@ const keyFormulas = () => {
       " ",
       convertToMajorKey(note)[4],
     ];
-    return chord;
+    return {
+      otherNames: `${note}maj, ${note}M, ${note}`,
+      notes: chord,
+      intervals: ["1P", "3M", "5P"],
+      semitones: [4, 3],
+    };
   };
 
   const getMinorTriadChord = (note: string) => {
@@ -230,7 +272,12 @@ const keyFormulas = () => {
       " ",
       convertToMinorKey(note)[4],
     ];
-    return chord;
+    return {
+      otherNames: `${note}m, ${note}min, ${note}-`,
+      notes: chord,
+      intervals: ["1P", "3m", "5P"],
+      semitones: [3, 4],
+    };
   };
 
   const getDiminishedTriadChord = (note: string) => {
@@ -243,7 +290,12 @@ const keyFormulas = () => {
       " ",
       notes[getGradeIndex(6, note)],
     ];
-    return chord;
+    return {
+      otherNames: `${note}dim, ${note}o, ${note}b5`,
+      notes: chord,
+      intervals: ["1P", "3m", "5d"],
+      semitones: [3, 3],
+    };
   };
 
   // Funciones para las cuatriadas
@@ -258,7 +310,12 @@ const keyFormulas = () => {
       " ",
       convertToMajorKey(note)[6],
     ];
-    return chord;
+    return {
+      otherNames: `${note}maj7, ${note}Δ, ${note}M7`,
+      notes: chord,
+      intervals: ["1P", "3M", "5P", "7M"],
+      semitones: [4, 3, 4],
+    };
   };
 
   const getMinorSeventh = (note: string) => {
@@ -271,7 +328,12 @@ const keyFormulas = () => {
       " ",
       convertToMinorKey(note)[6],
     ];
-    return chord;
+    return {
+      otherNames: `${note}m7, ${note}-7, ${note}min7`,
+      notes: chord,
+      intervals: ["1P", "3m", "5P", "7m"],
+      semitones: [3, 4, 3],
+    };
   };
 
   const getSeventh = (note: string) => {
@@ -286,7 +348,12 @@ const keyFormulas = () => {
       " ",
       notes[getGradeIndex(10, note)],
     ];
-    return chord;
+    return {
+      otherNames: `${note}7, ${note}dom, ${note}dom7`,
+      notes: chord,
+      intervals: ["1P", "3M", "5P", "7m"],
+      semitones: [4, 3, 3],
+    };
   };
 
   const getSemiDiminished = (note: string) => {
@@ -301,7 +368,12 @@ const keyFormulas = () => {
       " ",
       notes[getGradeIndex(10, note)],
     ];
-    return chord;
+    return {
+      otherNames: `${note}⌀7, ${note}m7b5, ${note}-7b5`,
+      notes: chord,
+      intervals: ["1P", "3m", "5d", "7m"],
+      semitones: [3, 3, 4],
+    };
   };
 
   // Funciones que devuelven toda la info de una nota en su tonalidad mayor
@@ -311,65 +383,65 @@ const keyFormulas = () => {
       {
         Grade: "1",
         DiatonicScaleName: "Ionian",
-        DiatonicScaleNotes: `${getIonianScale(grades[0])}`,
+        DiatonicScaleNotes: `${getIonianScale(grades[0]).notes}`,
         TriadName: `${grades[0]}`,
-        TriadNotes: getMajorTriadChord(grades[0]),
+        TriadNotes: getMajorTriadChord(grades[0]).notes,
         TetradName: `${grades[0]}Maj7`,
-        TetradNotes: getMajorSeventh(grades[0]),
+        TetradNotes: getMajorSeventh(grades[0]).notes,
       },
       {
         Grade: "2",
         DiatonicScaleName: "Dorian",
-        DiatonicScaleNotes: `${getDorianScale(grades[1])}`,
+        DiatonicScaleNotes: `${getDorianScale(grades[1]).notes}`,
         TriadName: `${grades[1]}m`,
-        TriadNotes: getMinorTriadChord(grades[1]),
+        TriadNotes: getMinorTriadChord(grades[1]).notes,
         TetradName: `${grades[1]}m7`,
-        TetradNotes: getMinorSeventh(grades[1]),
+        TetradNotes: getMinorSeventh(grades[1]).notes,
       },
       {
         Grade: "3",
         DiatonicScaleName: "Phrygian",
-        DiatonicScaleNotes: `${getPhrygianScale(grades[2])}`,
+        DiatonicScaleNotes: `${getPhrygianScale(grades[2]).notes}`,
         TriadName: `${grades[2]}m`,
-        TriadNotes: getMinorTriadChord(grades[2]),
+        TriadNotes: getMinorTriadChord(grades[2]).notes,
         TetradName: `${grades[2]}m7`,
-        TetradNotes: getMinorSeventh(grades[2]),
+        TetradNotes: getMinorSeventh(grades[2]).notes,
       },
       {
         Grade: "4",
         DiatonicScaleName: "Lydian",
-        DiatonicScaleNotes: `${getLydianScale(grades[3])}`,
+        DiatonicScaleNotes: `${getLydianScale(grades[3]).notes}`,
         TriadName: `${grades[3]}`,
-        TriadNotes: getMajorTriadChord(grades[3]),
+        TriadNotes: getMajorTriadChord(grades[3]).notes,
         TetradName: `${grades[3]}Maj7`,
-        TetradNotes: getMajorSeventh(grades[3]),
+        TetradNotes: getMajorSeventh(grades[3]).notes,
       },
       {
         Grade: "5",
         DiatonicScaleName: "Mixolydian",
-        DiatonicScaleNotes: `${getMixolydianScale(grades[4])}`,
+        DiatonicScaleNotes: `${getMixolydianScale(grades[4]).notes}`,
         TriadName: `${grades[4]}`,
-        TriadNotes: getMajorTriadChord(grades[4]),
+        TriadNotes: getMajorTriadChord(grades[4]).notes,
         TetradName: `${grades[4]}7`,
-        TetradNotes: getSeventh(grades[4]),
+        TetradNotes: getSeventh(grades[4]).notes,
       },
       {
         Grade: "6",
         DiatonicScaleName: "Aeolian",
-        DiatonicScaleNotes: `${getAeoliancScale(grades[5])}`,
+        DiatonicScaleNotes: `${getAeoliancScale(grades[5]).notes}`,
         TriadName: `${grades[5]}m`,
-        TriadNotes: getMinorTriadChord(grades[5]),
+        TriadNotes: getMinorTriadChord(grades[5]).notes,
         TetradName: `${grades[5]}m7`,
-        TetradNotes: getMinorSeventh(grades[5]),
+        TetradNotes: getMinorSeventh(grades[5]).notes,
       },
       {
         Grade: "7",
         DiatonicScaleName: "Locrian",
-        DiatonicScaleNotes: `${getLocrianScale(grades[6])}`,
+        DiatonicScaleNotes: `${getLocrianScale(grades[6]).notes}`,
         TriadName: `${grades[6]}mb5`,
-        TriadNotes: getDiminishedTriadChord(grades[6]),
+        TriadNotes: getDiminishedTriadChord(grades[6]).notes,
         TetradName: `${grades[6]}⌀7`,
-        TetradNotes: getSemiDiminished(grades[6]),
+        TetradNotes: getSemiDiminished(grades[6]).notes,
       },
     ];
 
@@ -382,72 +454,82 @@ const keyFormulas = () => {
       {
         Grade: "1",
         DiatonicScaleName: "Aeolian",
-        DiatonicScaleNotes: `${getAeoliancScale(grades[0])}`,
+        DiatonicScaleNotes: `${getAeoliancScale(grades[0]).notes}`,
         TriadName: `${grades[0]}m`,
-        TriadNotes: getMinorTriadChord(grades[0]),
+        TriadNotes: getMinorTriadChord(grades[0]).notes,
         TetradName: `${grades[0]}m7`,
-        TetradNotes: getMinorSeventh(grades[0]),
+        TetradNotes: getMinorSeventh(grades[0]).notes,
       },
       {
         Grade: "2",
         DiatonicScaleName: "Locrian",
-        DiatonicScaleNotes: `${getLocrianScale(grades[1])}`,
+        DiatonicScaleNotes: `${getLocrianScale(grades[1]).notes}`,
         TriadName: `${grades[1]}mb5`,
-        TriadNotes: getDiminishedTriadChord(grades[1]),
+        TriadNotes: getDiminishedTriadChord(grades[1]).notes,
         TetradName: `${grades[1]}⌀7`,
-        TetradNotes: getSemiDiminished(grades[1]),
+        TetradNotes: getSemiDiminished(grades[1]).notes,
       },
       {
         Grade: "b3",
         DiatonicScaleName: "Ionian",
-        DiatonicScaleNotes: `${getIonianScale(grades[2])}`,
+        DiatonicScaleNotes: `${getIonianScale(grades[2]).notes}`,
         TriadName: `${grades[2]}`,
-        TriadNotes: getMajorTriadChord(grades[2]),
+        TriadNotes: getMajorTriadChord(grades[2]).notes,
         TetradName: `${grades[2]}Maj7`,
-        TetradNotes: getMajorSeventh(grades[2]),
+        TetradNotes: getMajorSeventh(grades[2]).notes,
       },
       {
         Grade: "4",
         DiatonicScaleName: "Dorian",
-        DiatonicScaleNotes: `${getDorianScale(grades[3])}`,
+        DiatonicScaleNotes: `${getDorianScale(grades[3]).notes}`,
         TriadName: `${grades[3]}m`,
-        TriadNotes: getMinorTriadChord(grades[3]),
+        TriadNotes: getMinorTriadChord(grades[3]).notes,
         TetradName: `${grades[3]}m7`,
-        TetradNotes: getMinorSeventh(grades[3]),
+        TetradNotes: getMinorSeventh(grades[3]).notes,
       },
       {
         Grade: "5",
         DiatonicScaleName: "Phrygian",
-        DiatonicScaleNotes: `${getPhrygianScale(grades[4])}`,
+        DiatonicScaleNotes: `${getPhrygianScale(grades[4]).notes}`,
         TriadName: `${grades[4]}m`,
-        TriadNotes: getMinorTriadChord(grades[4]),
+        TriadNotes: getMinorTriadChord(grades[4]).notes,
         TetradName: `${grades[4]}m7`,
-        TetradNotes: getMinorSeventh(grades[4]),
+        TetradNotes: getMinorSeventh(grades[4]).notes,
       },
       {
         Grade: "b6",
         DiatonicScaleName: "Lydian",
-        DiatonicScaleNotes: `${getLydianScale(grades[5])}`,
+        DiatonicScaleNotes: `${getLydianScale(grades[5]).notes}`,
         TriadName: `${grades[5]}`,
-        TriadNotes: getMajorTriadChord(grades[5]),
+        TriadNotes: getMajorTriadChord(grades[5]).notes,
         TetradName: `${grades[5]}Maj7`,
-        TetradNotes: getMajorSeventh(grades[5]),
+        TetradNotes: getMajorSeventh(grades[5]).notes,
       },
       {
         Grade: "b7",
         DiatonicScaleName: "Mixolydian",
-        DiatonicScaleNotes: `${getMixolydianScale(grades[6])}`,
+        DiatonicScaleNotes: `${getMixolydianScale(grades[6]).notes}`,
         TriadName: `${grades[6]}`,
-        TriadNotes: getMajorTriadChord(grades[6]),
+        TriadNotes: getMajorTriadChord(grades[6]).notes,
         TetradName: `${grades[6]}7`,
-        TetradNotes: getSeventh(grades[6]),
+        TetradNotes: getSeventh(grades[6]).notes,
       },
     ];
 
     return info;
   };
 
-  return { getMajorKeyInfo, getMinorKeyInfo };
+  return {
+    getMajorKeyInfo,
+    getMinorKeyInfo,
+    getMajorTriadChord,
+    getMinorTriadChord,
+    getDiminishedTriadChord,
+    getMajorSeventh,
+    getMinorSeventh,
+    getSeventh,
+    getSemiDiminished,
+  };
 };
 
 export default keyFormulas;
