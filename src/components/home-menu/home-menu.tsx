@@ -4,8 +4,8 @@ const HomeMenu = () => {
   return (
     <HomeMenuContainer>
       <MenuOptions href="/key">Key</MenuOptions>
-      <MenuOptions href="">Chord</MenuOptions>
-      <MenuOptions href="">Scale</MenuOptions>
+      <MenuOptions href="/chords">Chord</MenuOptions>
+      <MenuOptions href="/scales">Scale</MenuOptions>
     </HomeMenuContainer>
   );
 };

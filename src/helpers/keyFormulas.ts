@@ -251,9 +251,7 @@ const keyFormulas = () => {
   const getMajorTriadChord = (note: string) => {
     const chord = [
       note,
-      " ",
       convertToMajorKey(note)[2],
-      " ",
       convertToMajorKey(note)[4],
     ];
     return {
