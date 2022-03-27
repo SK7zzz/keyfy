@@ -265,9 +265,7 @@ const keyFormulas = () => {
   const getMinorTriadChord = (note: string) => {
     const chord = [
       convertToMinorKey(note)[0],
-      " ",
       convertToMinorKey(note)[2],
-      " ",
       convertToMinorKey(note)[4],
     ];
     return {
@@ -283,9 +281,7 @@ const keyFormulas = () => {
     const notes = filterNotes(note);
     const chord = [
       note,
-      " ",
       notes[getGradeIndex(3, note)],
-      " ",
       notes[getGradeIndex(6, note)],
     ];
     return {
@@ -301,11 +297,8 @@ const keyFormulas = () => {
   const getMajorSeventh = (note: string) => {
     const chord = [
       convertToMajorKey(note)[0],
-      " ",
       convertToMajorKey(note)[2],
-      " ",
       convertToMajorKey(note)[4],
-      " ",
       convertToMajorKey(note)[6],
     ];
     return {
@@ -319,11 +312,8 @@ const keyFormulas = () => {
   const getMinorSeventh = (note: string) => {
     const chord = [
       convertToMinorKey(note)[0],
-      " ",
       convertToMinorKey(note)[2],
-      " ",
       convertToMinorKey(note)[4],
-      " ",
       convertToMinorKey(note)[6],
     ];
     return {
@@ -339,11 +329,8 @@ const keyFormulas = () => {
     const notes = filterNotes(note);
     const chord = [
       note,
-      " ",
       notes[getGradeIndex(4, note)],
-      " ",
       notes[getGradeIndex(7, note)],
-      " ",
       notes[getGradeIndex(10, note)],
     ];
     return {
@@ -359,11 +346,8 @@ const keyFormulas = () => {
     const notes = filterNotes(note);
     const chord = [
       note,
-      " ",
       notes[getGradeIndex(3, note)],
-      " ",
       notes[getGradeIndex(6, note)],
-      " ",
       notes[getGradeIndex(10, note)],
     ];
     return {
@@ -518,8 +502,10 @@ const keyFormulas = () => {
   };
 
   return {
+    //get key
     getMajorKeyInfo,
     getMinorKeyInfo,
+    //get chords
     getMajorTriadChord,
     getMinorTriadChord,
     getDiminishedTriadChord,
@@ -527,6 +513,14 @@ const keyFormulas = () => {
     getMinorSeventh,
     getSeventh,
     getSemiDiminished,
+    //get scales
+    getIonianScale,
+    getDorianScale,
+    getPhrygianScale,
+    getLydianScale,
+    getMixolydianScale,
+    getAeoliancScale,
+    getLocrianScale,
   };
 };
 

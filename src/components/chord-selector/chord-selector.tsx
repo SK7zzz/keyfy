@@ -31,7 +31,7 @@ const ChordSelector = () => {
           dispatch(setChord(e.target.value));
         }}
       >
-        {keyState.avaibleChords.map((chord: string, i: number) => (
+        {keyState.availableChords.map((chord: string, i: number) => (
           <option key={i} value={chord}>
             {chord}
           </option>

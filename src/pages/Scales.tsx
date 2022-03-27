@@ -1,12 +1,14 @@
-import { KeyContainer } from "../containers/key-cotainer";
-import SearchBar from "../components/search-bar/search-bar";
-import KeyTable from "../components/key-table/key-table";
-import TonalitySelector from "../components/key-selector/key-selector";
-import BackIcon from "../components/back-icon/back-icon";
+import ScalesInfo from "../components/scales-info/scales-info";
+import ScalesSelector from "../components/scales-selector/scales-selector";
 import { ScalesContainer } from "../containers/scales.container";
 
 const Scales = () => {
-  return <ScalesContainer></ScalesContainer>;
+  return (
+    <ScalesContainer>
+      <ScalesSelector />
+      <ScalesInfo />
+    </ScalesContainer>
+  );
 };
 
 export default Scales;

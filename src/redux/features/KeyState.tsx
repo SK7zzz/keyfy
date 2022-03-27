@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createImportSpecifier } from "typescript";
 import keyFormulas from "../../helpers/keyFormulas";
 
 export const keySlice = createSlice({
@@ -25,15 +24,6 @@ export const keySlice = createSlice({
         "Gb",
         "G#",
       ],
-      avaibleChords: [
-        "Major",
-        "Minor",
-        "Diminished",
-        "Seventh",
-        "Major Seventh",
-        "Minor Seventh",
-        "Semidiminished",
-      ],
 
       currentNote: "A",
 
@@ -43,12 +33,39 @@ export const keySlice = createSlice({
       currentMinorKeyData: [],
 
       // Chord Page
+      availableChords: [
+        "Major",
+        "Minor",
+        "Diminished",
+        "Seventh",
+        "Major Seventh",
+        "Minor Seventh",
+        "Semidiminished",
+      ],
       selectedChord: "Major",
       currentChord: {
         otherNames: "Amaj, AM, A",
         notes: ["A", "C#", "E"],
         intervals: ["1P", "3M", "5P"],
         semitones: [4, 3],
+      },
+
+      // Scales Page
+      availableScales: [
+        "Ionian",
+        "Dorian",
+        "Phrygian",
+        "Lydian",
+        "Mixolydian",
+        "Aeolian",
+        "Locrian",
+      ],
+      selectedScale: "Ionian",
+      currentScale: {
+        otherNames: "Ionian, Major, Ethiopian",
+        notes: ["A", "B", "C#", "D", "E", "F#", "G#"],
+        intervals: ["1P", "2M", "3M", "4P", "5P", "6M", "7M"],
+        semitones: [2, 2, 1, 2, 2, 2, 1],
       },
     },
   },
@@ -69,7 +86,6 @@ export const keySlice = createSlice({
       state.value.currentNote = action.payload;
     },
     setChord: (state: any, action: any) => {
-
       state.value.selectedChord = action.payload;
 
       const currentNote = state.value.currentNote;
@@ -139,11 +155,73 @@ export const keySlice = createSlice({
       }
     },
     setScale: (state: any, action: any) => {
-      state.value.currentKey = action.payload;
+      state.value.selectedScale = action.payload;
+      const currentNote = state.value.currentNote;
+
+      switch (action.payload) {
+        case "Ionian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getIonianScale(currentNote).otherNames,
+            notes: keyFormulas().getIonianScale(currentNote).notes,
+            intervals: keyFormulas().getIonianScale(currentNote).intervals,
+            semitones: keyFormulas().getIonianScale(currentNote).semitones,
+          };
+          break;
+        case "Dorian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getDorianScale(currentNote).otherNames,
+            notes: keyFormulas().getDorianScale(currentNote).notes,
+            intervals: keyFormulas().getDorianScale(currentNote).intervals,
+            semitones: keyFormulas().getDorianScale(currentNote).semitones,
+          };
+          break;
+        case "Phrygian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getPhrygianScale(currentNote).otherNames,
+            notes: keyFormulas().getPhrygianScale(currentNote).notes,
+            intervals: keyFormulas().getPhrygianScale(currentNote).intervals,
+            semitones: keyFormulas().getPhrygianScale(currentNote).semitones,
+          };
+          break;
+        case "Lydian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getLydianScale(currentNote).otherNames,
+            notes: keyFormulas().getLydianScale(currentNote).notes,
+            intervals: keyFormulas().getLydianScale(currentNote).intervals,
+            semitones: keyFormulas().getLydianScale(currentNote).semitones,
+          };
+          break;
+        case "Mixolydian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getMixolydianScale(currentNote).otherNames,
+            notes: keyFormulas().getMixolydianScale(currentNote).notes,
+            intervals: keyFormulas().getMixolydianScale(currentNote).intervals,
+            semitones: keyFormulas().getMixolydianScale(currentNote).semitones,
+          };
+          break;
+        case "Aeolian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getAeoliancScale(currentNote).otherNames,
+            notes: keyFormulas().getAeoliancScale(currentNote).notes,
+            intervals: keyFormulas().getAeoliancScale(currentNote).intervals,
+            semitones: keyFormulas().getAeoliancScale(currentNote).semitones,
+          };
+          break;
+        case "Locrian":
+          state.value.currentScale = {
+            otherNames: keyFormulas().getLocrianScale(currentNote).otherNames,
+            notes: keyFormulas().getLocrianScale(currentNote).notes,
+            intervals: keyFormulas().getLocrianScale(currentNote).intervals,
+            semitones: keyFormulas().getLocrianScale(currentNote).semitones,
+          };
+          break;
+        default:
+      }
     },
   },
 });
 
-export const { setKeyData, setKey, setChord, setNote } = keySlice.actions;
+export const { setKeyData, setKey, setChord, setScale, setNote } =
+  keySlice.actions;
 
 export default keySlice.reducer;
