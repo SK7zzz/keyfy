@@ -12,7 +12,7 @@ function App() {
       <GlobalStyles />
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/keyfy" element={<Home />} />
           <Route path="/key" element={<Key />} />
           <Route path="/chords" element={<Chords />} />
           <Route path="/scales" element={<Scales />} />

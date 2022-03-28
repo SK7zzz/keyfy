@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setChord, setNote } from "../../redux/features/KeyState";
-import BackIcon from "../back-icon/back-icon";
 import {
   ChordNoteSelector,
   ChordSelectorContainer,

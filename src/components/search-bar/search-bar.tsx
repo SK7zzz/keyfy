@@ -18,9 +18,9 @@ const SearchBar = () => {
     const input = event.target.value;
     console.log(input.length);
     const styledInput = () => {
-      if (input.length == 2) {
+      if (input.length === 2) {
         return input[0].toUpperCase() + input[1].toLowerCase();
-      } else if (input.length == 1) {
+      } else if (input.length === 1) {
         return input.toUpperCase();
       }
     };
