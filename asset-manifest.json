@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/keyfy/static/js/main.2e04d9cd.js",
+    "index.html": "/keyfy/index.html",
+    "main.2e04d9cd.js.map": "/keyfy/static/js/main.2e04d9cd.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.2e04d9cd.js"
+  ]
+}
