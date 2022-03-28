@@ -166,6 +166,25 @@ const keyFormulas = () => {
       semitones: [1, 2, 2, 2, 1, 2, 2],
     };
   };
+  const getMajorPhrygianScale = (note: string) => {
+    // Const with the notes array filtered
+    const notes = sharpNotes;
+    const scale = [
+      note,
+      notes[getGradeIndex(1, note)],
+      notes[getGradeIndex(4, note)],
+      notes[getGradeIndex(5, note)],
+      notes[getGradeIndex(7, note)],
+      notes[getGradeIndex(8, note)],
+      notes[getGradeIndex(10, note)],
+    ];
+    return {
+      otherNames: "Major Phrygian, Spanish Phrygian, Dominant Phrygian",
+      notes: scale,
+      intervals: ["1P", "2m", "3M", "4P", "5P", "6m", "7m"],
+      semitones: [1, 3, 1, 2, 1, 2, 2],
+    };
+  };
 
   const getLydianScale = (note: string) => {
     // Const with the notes array filtered
@@ -517,6 +536,7 @@ const keyFormulas = () => {
     getIonianScale,
     getDorianScale,
     getPhrygianScale,
+    getMajorPhrygianScale,
     getLydianScale,
     getMixolydianScale,
     getAeoliancScale,

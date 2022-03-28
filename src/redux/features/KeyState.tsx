@@ -55,6 +55,7 @@ export const keySlice = createSlice({
         "Ionian",
         "Dorian",
         "Phrygian",
+        "Major Phrygian",
         "Lydian",
         "Mixolydian",
         "Aeolian",
@@ -183,6 +184,17 @@ export const keySlice = createSlice({
             semitones: keyFormulas().getPhrygianScale(currentNote).semitones,
           };
           break;
+        case "Major Phrygian":
+          state.value.currentScale = {
+            otherNames:
+              keyFormulas().getMajorPhrygianScale(currentNote).otherNames,
+            notes: keyFormulas().getMajorPhrygianScale(currentNote).notes,
+            intervals:
+              keyFormulas().getMajorPhrygianScale(currentNote).intervals,
+            semitones:
+              keyFormulas().getMajorPhrygianScale(currentNote).semitones,
+          };
+          break;
         case "Lydian":
           state.value.currentScale = {
             otherNames: keyFormulas().getLydianScale(currentNote).otherNames,
@@ -193,7 +205,8 @@ export const keySlice = createSlice({
           break;
         case "Mixolydian":
           state.value.currentScale = {
-            otherNames: keyFormulas().getMixolydianScale(currentNote).otherNames,
+            otherNames:
+              keyFormulas().getMixolydianScale(currentNote).otherNames,
             notes: keyFormulas().getMixolydianScale(currentNote).notes,
             intervals: keyFormulas().getMixolydianScale(currentNote).intervals,
             semitones: keyFormulas().getMixolydianScale(currentNote).semitones,

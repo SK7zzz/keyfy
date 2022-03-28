@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const BackIconContainer = styled.div`
   padding: 0px;
   margin: 0px;
+  width: 100%;
   padding-top: 4vh;
   padding-left: 6vw;
 `;
