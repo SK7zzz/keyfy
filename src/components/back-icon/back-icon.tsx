@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const BackIcon = () => {
   return (
     <BackIconContainer>
-      <BackIconButton href="/keyfy">
+      <BackIconButton href="/">
         <FaArrowLeft />
       </BackIconButton>
     </BackIconContainer>
