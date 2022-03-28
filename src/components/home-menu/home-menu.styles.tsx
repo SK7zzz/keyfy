@@ -31,6 +31,3 @@ export const HomeMenuContainer = styled.div`
     }
   }
 `;
-
-// Menu options
-export const MenuOptions = styled.a``;

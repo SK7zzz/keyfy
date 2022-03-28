@@ -1,4 +1,4 @@
-import { BackIconContainer, BackIconButton } from "./back-icon.styles";
+import { BackIconContainer } from "./back-icon.styles";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

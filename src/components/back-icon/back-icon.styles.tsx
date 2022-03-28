@@ -28,5 +28,3 @@ export const BackIconContainer = styled.div`
     }
   }
 `;
-
-export const BackIconButton = styled.a``;

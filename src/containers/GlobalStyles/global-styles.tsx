@@ -8,5 +8,7 @@ export const GlobalStyles = createGlobalStyle`
         background: #222831;
         font-family: "Quicksand", sans-serif;
         color: #EEEEEE;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 `;
