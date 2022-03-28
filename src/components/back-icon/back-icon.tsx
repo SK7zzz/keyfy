@@ -1,12 +1,13 @@
 import { BackIconContainer, BackIconButton } from "./back-icon.styles";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BackIcon = () => {
   return (
     <BackIconContainer>
-      <BackIconButton href="/">
+      <Link to="/">
         <FaArrowLeft />
-      </BackIconButton>
+      </Link>
     </BackIconContainer>
   );
 };
