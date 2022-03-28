@@ -11,8 +11,6 @@ const ChordSelector = () => {
   // Dispach and Selector to access global states and functions
   const dispatch = useDispatch();
   const keyState = useSelector((state: any) => state.keyState.value);
-
-  console.log(keyState.currentChord);
   return (
     <ChordSelectorContainer>
       <ChordNoteSelector

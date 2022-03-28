@@ -10,7 +10,7 @@ import {
 const ChordInfo = () => {
   // Selector to access global states and functions
   const keyState = useSelector((state: any) => state.keyState.value);
-
+ 
   return (
     <ChordInfoContainer>
       <OtherNamesContainer>
