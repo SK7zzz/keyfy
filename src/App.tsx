@@ -13,9 +13,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/key" element={<Key />} />
-          <Route path="/chords" element={<Chords />} />
-          <Route path="/scales" element={<Scales />} />
+          <Route path="/keyfy/key" element={<Key />} />
+          <Route path="/keyfy/chords" element={<Chords />} />
+          <Route path="/keyfy/scales" element={<Scales />} />
         </Routes>
       </Layout>
     </HashRouter>
