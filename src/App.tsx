@@ -8,14 +8,14 @@ import Scales from "./pages/Scales";
 
 function App() {
   return (
-    <HashRouter basename="">
+    <HashRouter>
       <GlobalStyles />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/keyfy/key" element={<Key />} />
-          <Route path="/keyfy/chords" element={<Chords />} />
-          <Route path="/keyfy/scales" element={<Scales />} />
+          <Route path="/key" element={<Key />} />
+          <Route path="/chords" element={<Chords />} />
+          <Route path="/scales" element={<Scales />} />
         </Routes>
       </Layout>
     </HashRouter>

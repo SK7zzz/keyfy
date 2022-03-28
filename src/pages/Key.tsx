@@ -1,4 +1,4 @@
-import { KeyContainer } from "../containers/key-cotainer";
+import { KeyContainer } from "../containers/key-container";
 import SearchBar from "../components/search-bar/search-bar";
 import KeyTable from "../components/key-table/key-table";
 import TonalitySelector from "../components/key-selector/key-selector";
