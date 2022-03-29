@@ -14,7 +14,7 @@ This project was made with the next purposes:
 
 ## Goals
 
-- Upgrade chords and scales info design.
+- ~~Upgrade chords and scales info design.~~
 - Add a bass neck on chords and scales pages.
 - Implement Tailwind CSS.
 - Improve the responsive design.
