@@ -8,7 +8,7 @@ This project was made with the next purposes:
 
 - Learn TypeScript, Redux Toolkit and Styled components.
 
-- Make an usefull app for people who is starting their musical journeys and need to check out some chords, scales or harmony.
+- Develop an usefull app for people who is starting their musical journeys and need to check out some chords, scales or harmony.
 
 - Reinforce my music theory understanding.
 
