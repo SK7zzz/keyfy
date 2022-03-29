@@ -10,15 +10,33 @@ import {
 const ChordInfo = () => {
   // Selector to access global states and functions
   const keyState = useSelector((state: any) => state.keyState.value);
- 
+
   return (
     <ChordInfoContainer>
       <OtherNamesContainer>
-        {`Other Names: ${keyState.currentChord.otherNames}`}
+        <p>Other names: </p>
+        {keyState.currentChord.otherNames.map((otherName: any) => (
+          <p>{otherName}</p>
+        ))}
       </OtherNamesContainer>
-      <NotesContainer>{`Notes: ${keyState.currentChord.notes}`}</NotesContainer>
-      <IntervalsContainer>{`Intervals: ${keyState.currentChord.intervals}`}</IntervalsContainer>
-      <SemitonesContainer>{`Semitones: ${keyState.currentChord.semitones}`}</SemitonesContainer>
+      <NotesContainer>
+        <p>Notes: </p>
+        {keyState.currentChord.notes.map((note: any) => (
+          <p className="notes">{note}</p>
+        ))}
+      </NotesContainer>
+      <IntervalsContainer>
+        <p>Intervals: </p>
+        {keyState.currentChord.intervals.map((interval: any) => (
+          <p>{interval}</p>
+        ))}
+      </IntervalsContainer>
+      <SemitonesContainer>
+        <p>Semitones: </p>
+        {keyState.currentChord.semitones.map((semitone: any) => (
+          <p>{semitone}</p>
+        ))}
+      </SemitonesContainer>
     </ChordInfoContainer>
   );
 };

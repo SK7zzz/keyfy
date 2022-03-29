@@ -40,12 +40,14 @@ export const ChordChordSelector = styled.select`
   border: 2px solid #00adb5;
   padding: 12px;
   margin: 0;
+  margin-right: 4vw;
   width: 10vw;
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
   line-height: inherit;
   outline: none;
+
   & option {
     background-color: #222831;
   }

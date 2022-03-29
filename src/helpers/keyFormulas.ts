@@ -119,7 +119,7 @@ const keyFormulas = () => {
   // Funciones para las escalas diatonicas
   const getIonianScale = (note: string) => {
     return {
-      otherNames: "Major, Ionian",
+      otherNames: ["Major", "Ionian"],
       notes: convertToMajorKey(note),
       intervals: ["1P", "2M", "3M", "4P", "5P", "6M", "7M"],
       semitones: [2, 2, 1, 2, 2, 2, 1],
@@ -140,7 +140,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: "Dorian, Kafi theta",
+      otherNames: ["Dorian", "Kafi theta"],
       notes: scale,
       intervals: ["1P", "2M", "3m", "4P", "5P", "6M", "7m"],
       semitones: [2, 1, 2, 2, 2, 1, 2],
@@ -160,7 +160,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: "Phrygian, Neopolitan minor",
+      otherNames: ["Phrygian", "Neopolitan minor"],
       notes: scale,
       intervals: ["1P", "2m", "3m", "4P", "5P", "6m", "7m"],
       semitones: [1, 2, 2, 2, 1, 2, 2],
@@ -179,7 +179,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: "Major Phrygian, Spanish Phrygian, Dominant Phrygian",
+      otherNames: ["Major Phrygian", "Spanish Phrygian", "Dominant Phrygian"],
       notes: scale,
       intervals: ["1P", "2m", "3M", "4P", "5P", "6m", "7m"],
       semitones: [1, 3, 1, 2, 1, 2, 2],
@@ -199,7 +199,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(11, note)],
     ];
     return {
-      otherNames: "Lydian, Kalyan theta",
+      otherNames: ["Lydian", "Kalyan theta"],
       notes: scale,
       intervals: ["1P", "2M", "3M", "4A", "5P", "6M", "7M"],
       semitones: [2, 2, 2, 1, 2, 2, 1],
@@ -219,7 +219,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: "Mixolydian, Dominant 7th, Khamaj theta",
+      otherNames: ["Mixolydian", "Dominant 7th", "Khamaj theta"],
       notes: scale,
       intervals: ["1P", "2M", "3M", "4A", "5P", "6M", "7m"],
       semitones: [2, 2, 1, 2, 2, 1, 2],
@@ -239,7 +239,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: "Aeolian, Minor(natural), Asavari theta",
+      otherNames: ["Aeolian", "Minor(natural)", "Asavari theta"],
       notes: scale,
       intervals: ["1P", "2M", "3m", "4A", "5P", "6m", "7m"],
       semitones: [2, 1, 2, 2, 1, 2, 2],
@@ -259,7 +259,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: "Locrian, Half diminished",
+      otherNames: ["Locrian", "Half diminished"],
       notes: scale,
       intervals: ["1P", "2m", "3m", "4P", "5d", "6m", "7m"],
       semitones: [1, 2, 2, 1, 2, 2, 2],
@@ -274,7 +274,7 @@ const keyFormulas = () => {
       convertToMajorKey(note)[4],
     ];
     return {
-      otherNames: `${note}maj, ${note}M, ${note}`,
+      otherNames: [`${note}maj`, `${note}M`, `${note}`],
       notes: chord,
       intervals: ["1P", "3M", "5P"],
       semitones: [4, 3],
@@ -288,7 +288,7 @@ const keyFormulas = () => {
       convertToMinorKey(note)[4],
     ];
     return {
-      otherNames: `${note}m, ${note}min, ${note}-`,
+      otherNames: [`${note}m`, `${note}min`, `${note}-`],
       notes: chord,
       intervals: ["1P", "3m", "5P"],
       semitones: [3, 4],
@@ -304,7 +304,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(6, note)],
     ];
     return {
-      otherNames: `${note}dim, ${note}o, ${note}b5`,
+      otherNames: [`${note}dim`, `${note}o`, `${note}b5`],
       notes: chord,
       intervals: ["1P", "3m", "5d"],
       semitones: [3, 3],
@@ -321,7 +321,7 @@ const keyFormulas = () => {
       convertToMajorKey(note)[6],
     ];
     return {
-      otherNames: `${note}maj7, ${note}Δ, ${note}M7`,
+      otherNames: [`${note}maj7`, `${note}Δ`, `${note}M7`],
       notes: chord,
       intervals: ["1P", "3M", "5P", "7M"],
       semitones: [4, 3, 4],
@@ -336,7 +336,7 @@ const keyFormulas = () => {
       convertToMinorKey(note)[6],
     ];
     return {
-      otherNames: `${note}m7, ${note}-7, ${note}min7`,
+      otherNames: [`${note}m7`, `${note}-7`, `${note}min7`],
       notes: chord,
       intervals: ["1P", "3m", "5P", "7m"],
       semitones: [3, 4, 3],
@@ -353,7 +353,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: `${note}7, ${note}dom, ${note}dom7`,
+      otherNames: [`${note}7`, `${note}dom`, `${note}dom7`],
       notes: chord,
       intervals: ["1P", "3M", "5P", "7m"],
       semitones: [4, 3, 3],
@@ -370,7 +370,7 @@ const keyFormulas = () => {
       notes[getGradeIndex(10, note)],
     ];
     return {
-      otherNames: `${note}⌀7, ${note}m7b5, ${note}-7b5`,
+      otherNames: [`${note}⌀7`, `${note}m7b5`, `${note}-7b5`],
       notes: chord,
       intervals: ["1P", "3m", "5d", "7m"],
       semitones: [3, 3, 4],

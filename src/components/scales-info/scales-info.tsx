@@ -13,11 +13,29 @@ const ScalesInfo = () => {
   return (
     <ScalesInfoContainer>
       <OtherNamesContainer>
-        {`Other Names: ${keyState.currentScale.otherNames}`}
+        <p>Other names: </p>
+        {keyState.currentScale.otherNames.map((otherName: any) => (
+          <p>{otherName}</p>
+        ))}
       </OtherNamesContainer>
-      <NotesContainer>{`Notes: ${keyState.currentScale.notes}`}</NotesContainer>
-      <IntervalsContainer>{`Intervals: ${keyState.currentScale.intervals}`}</IntervalsContainer>
-      <SemitonesContainer>{`Semitones: ${keyState.currentScale.semitones}`}</SemitonesContainer>
+      <NotesContainer>
+        <p>Notes: </p>
+        {keyState.currentScale.notes.map((note: any) => (
+          <p className="notes">{note}</p>
+        ))}
+      </NotesContainer>
+      <IntervalsContainer>
+        <p>Intervals: </p>
+        {keyState.currentScale.intervals.map((interval: any) => (
+          <p>{interval}</p>
+        ))}
+      </IntervalsContainer>
+      <SemitonesContainer>
+        <p>Semitones: </p>
+        {keyState.currentScale.semitones.map((semitone: any) => (
+          <p>{semitone}</p>
+        ))}
+      </SemitonesContainer>
     </ScalesInfoContainer>
   );
 };

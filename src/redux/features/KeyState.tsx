@@ -44,7 +44,7 @@ export const keySlice = createSlice({
       ],
       selectedChord: "Major",
       currentChord: {
-        otherNames: "Amaj, AM, A",
+        otherNames: ["Amaj", "AM", "A"],
         notes: ["A", "C#", "E"],
         intervals: ["1P", "3M", "5P"],
         semitones: [4, 3],
@@ -63,7 +63,7 @@ export const keySlice = createSlice({
       ],
       selectedScale: "Ionian",
       currentScale: {
-        otherNames: "Ionian, Major, Ethiopian",
+        otherNames: ["Ionian", "Major", "Ethiopian"],
         notes: ["A", "B", "C#", "D", "E", "F#", "G#"],
         intervals: ["1P", "2M", "3M", "4P", "5P", "6M", "7M"],
         semitones: [2, 2, 1, 2, 2, 2, 1],
