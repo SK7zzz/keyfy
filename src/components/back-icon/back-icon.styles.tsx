@@ -1,30 +1,36 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 // Back Icon container
 export const BackIconContainer = styled.div`
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-  padding-top: 4vh;
-  padding-left: 6vw;
-  & a {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    color: #eeeeee;
-    border: 3px solid #00adb5;
-    border-radius: 100%;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  ${tw`
+  p-0
+  m-0
+  ml-20
+  mt-10
+  w-full
+  `}
 
-    &:hover {
-      background-color: #00adb5;
-      color: #15191f;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  & a {
+
+    ${tw`
+      p-0
+      m-0
+      w-12
+      h-12
+      no-underline
+      text-white
+      border-4
+      border-solid
+      border-secondary
+      rounded-full
+      flex
+      justify-around
+      items-center
+      hover:bg-secondary
+      hover:text-primary
+      hover:font-bold
+      hover:cursor-pointer
+    `}
   }
 `;

@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 export const KeyContainer = styled.div`
-  padding: 0px;
-  margin: 0px;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  ${tw`
+      w-full
+      h-full
+      p-0
+      m-0
+      flex
+      flex-col
+  `};
 `;

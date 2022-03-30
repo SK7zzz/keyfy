@@ -1,19 +1,23 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 // Main header container
 export const HeaderContainer = styled.div`
-  padding: 0px;
-  margin: 0px;
-  margin-top: 16vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  ${tw`
+  p-0
+  m-0
+  mt-32
+  flex
+  flex-col
+  items-center
+`}
 `;
 
 // Header Title
 export const HeaderTitle = styled.p`
-  padding: 0;
-  margin: 0;
-  font-size: 44px;
+  ${tw`
+  p-0
+  m-0
+  text-5xl
+  `}
 `;

@@ -1,9 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setChord, setNote } from "../../redux/features/KeyState";
 import {
-  ChordNoteSelector,
+  Selector,
   ChordSelectorContainer,
-  ChordChordSelector,
 } from "./chord-selector.styles";
 
 const ChordSelector = () => {
@@ -12,7 +11,7 @@ const ChordSelector = () => {
   const keyState = useSelector((state: any) => state.keyState.value);
   return (
     <ChordSelectorContainer>
-      <ChordNoteSelector
+      <Selector
         onChange={(e) => {
           dispatch(setNote(e.target.value));
           dispatch(setChord(keyState.selectedChord));
@@ -23,8 +22,8 @@ const ChordSelector = () => {
             {note}
           </option>
         ))}
-      </ChordNoteSelector>
-      <ChordChordSelector
+      </Selector>
+      <Selector
         onChange={(e) => {
           dispatch(setChord(e.target.value));
         }}
@@ -34,7 +33,7 @@ const ChordSelector = () => {
             {chord}
           </option>
         ))}
-      </ChordChordSelector>
+      </Selector>
     </ChordSelectorContainer>
   );
 };

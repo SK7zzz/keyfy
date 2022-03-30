@@ -1,10 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setNote, setScale } from "../../redux/features/KeyState";
-import {
-  ScalesNoteSelector,
-  ScalesScalesSelector,
-  ScalesSelectorContainer,
-} from "./scales-selector.styles";
+import { Selector, ScalesSelectorContainer } from "./scales-selector.styles";
 
 const ScalesSelector = () => {
   // Dispach and Selector to access global states and functions
@@ -13,7 +9,7 @@ const ScalesSelector = () => {
 
   return (
     <ScalesSelectorContainer>
-      <ScalesNoteSelector
+      <Selector
         onChange={(e) => {
           dispatch(setNote(e.target.value));
           dispatch(setScale(keyState.selectedScale));
@@ -24,8 +20,8 @@ const ScalesSelector = () => {
             {note}
           </option>
         ))}
-      </ScalesNoteSelector>
-      <ScalesScalesSelector
+      </Selector>
+      <Selector
         onChange={(e) => {
           dispatch(setScale(e.target.value));
         }}
@@ -35,7 +31,7 @@ const ScalesSelector = () => {
             {scale}
           </option>
         ))}
-      </ScalesScalesSelector>
+      </Selector>
     </ScalesSelectorContainer>
   );
 };

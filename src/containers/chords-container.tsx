@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 export const ChordsContainer = styled.div`
-  padding: 0px;
-  margin: 0px;
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
+  ${tw`
+      w-full
+      h-full
+      p-0
+      m-0
+      flex
+      flex-col
+      items-center
+  `};
 `;

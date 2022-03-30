@@ -1,32 +1,27 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 
 // Key Table container
 export const KeyTableContainer = styled.div`
-  margin-top: 10vh;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
+  ${tw`
+   mt-10
+   flex
+   justify-center
+   text-base
+  `};
 
   & th {
-    padding-inline: 2vw;
-    padding-bottom: 2vh;
-    color: #00ADB5;
-  }
-
-  & th {
-    padding-inline: 2vw;
-    padding-bottom: 2vh;
-    color: #00ADB5;
-  }
-
-  & th:hover {
-    text-decoration: underline;
-    text-decoration-color: white;
+    ${tw`
+    text-secondary
+    px-4
+    pb-4
+    `}
   }
 
   & td {
-    padding-bottom: 3vh;
-    color: white;
-    text-align: center;
+    ${tw`
+    pb-6
+    text-center
+    `}
   }
 `;
