@@ -1,7 +1,10 @@
 import styled from "styled-components";
-
+import tw from "twin.macro";
 // Main scales info container
 export const ScalesInfoContainer = styled.div`
+  ${tw`
+
+  `};
   padding: 0px;
   margin: 0px;
   margin-top: 4vh;
