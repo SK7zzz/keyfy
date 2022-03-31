@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
         bg-primary
         p-0
         m-0
+        overflow-x-hidden
         `};
     }
 `;

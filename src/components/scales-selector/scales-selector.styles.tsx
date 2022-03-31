@@ -5,8 +5,11 @@ export const ScalesSelectorContainer = styled.div`
   ${tw`
     p-0
     m-0
-    mt-10
+    mt-6
+    md:mt-10
     flex
+    flex-col
+    md:flex-row
     justify-center
   `}
 `;
@@ -16,8 +19,12 @@ export const Selector = styled.select`
     p-0
     m-0
     mx-4
-    w-32
-    h-8
+    my-2
+    md:my-0
+    w-48
+    md:w-32
+    h-12
+    md:h-8
     appearance-none
     text-white
     text-center

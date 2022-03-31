@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       colors: { primary: "#222831", secondary: "#00adb5" },
-      fontFamily: { font: "Quicksand" },
     },
     screens: {
       sm: "640px",

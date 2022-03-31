@@ -6,10 +6,12 @@ export const HeaderContainer = styled.div`
   ${tw`
   p-0
   m-0
-  mt-32
+  md:mt-32
+  mt-20
   flex
   flex-col
   items-center
+  text-center
 `}
 `;
 
@@ -18,6 +20,7 @@ export const HeaderTitle = styled.p`
   ${tw`
   p-0
   m-0
-  text-5xl
+  text-3xl
+  md:text-5xl
   `}
 `;

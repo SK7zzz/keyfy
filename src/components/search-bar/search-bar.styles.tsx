@@ -6,6 +6,8 @@ export const SearchContainer = styled.div`
   ${tw`
   p-0
   m-0
+  mt-14
+  md:mt-0
   flex
   justify-center
  `};
@@ -23,7 +25,7 @@ export const SearchIcon = styled.span`
 export const SearchInput = styled.input`
   ${tw`
   ml-4
-  text-left
+  md:text-left
   text-white
   text-lg
   bg-transparent

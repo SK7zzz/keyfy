@@ -6,10 +6,13 @@ export const ScalesInfoContainer = styled.div`
     p-0
     m-0
     mt-4
-    margin-left[12rem]
+    ml-4
+    md:margin-left[12rem]
     flex
     flex-col
-    text-base
+    text-sm
+    md:text-base
+    max-w-full
   `}
   & .notes {
     ${tw`
@@ -36,6 +39,8 @@ export const OtherNamesContainer = styled.div`
   ${tw`
     flex
     items-center
+    flex-wrap
+    
   `}
 
   & p {
@@ -49,6 +54,7 @@ export const NotesContainer = styled.div`
     w-full
     flex
     items-center
+    flex-wrap
   `}
 
   & p {

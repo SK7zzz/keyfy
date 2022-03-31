@@ -6,8 +6,11 @@ export const KeySelectorContainer = styled.div`
   ${tw`
     p-0
     m-0
-    mt-8
+    mt-4
+    md:mt-8
     flex
+    flex-col
+    md:flex-row
     justify-center
   `}
 `;
@@ -20,6 +23,8 @@ export const KeyOptions = styled.button`
   py-2
   bg-transparent
   mx-4
+  my-2
+  md:my-0
   no-underline
   text-base
   text-white

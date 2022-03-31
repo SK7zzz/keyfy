@@ -5,9 +5,13 @@ import tw from "twin.macro";
 export const KeyTableContainer = styled.div`
   ${tw`
    mt-10
-   flex
+   flex-wrap
+   md:flex
    justify-center
-   text-base
+   text-sm
+   md:text-base
+   overflow-x-auto
+   overflow-y-auto
   `};
 
   & th {

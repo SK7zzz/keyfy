@@ -6,9 +6,13 @@ export const BackIconContainer = styled.div`
   ${tw`
   p-0
   m-0
-  ml-20
+  md:ml-20
   mt-10
   w-full
+  flex
+  items-center
+  justify-center
+  md:justify-start
   `}
 
   & a {

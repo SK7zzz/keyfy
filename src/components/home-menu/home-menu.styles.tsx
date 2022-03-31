@@ -6,25 +6,34 @@ export const HomeMenuContainer = styled.div`
   ${tw`
   p-0
   m-0
+  mt-16
+  md:mt-0
   w-full
   h-full
   flex
-  justify-around
+  flex-col
+  md:flex-row
+  md:justify-around
   items-center
   `};
 
   & a {
     ${tw`
       m-0
+      my-8
+      md:my-0
       text-white
       no-underline
       text-xl
+      text-center
       border-4
       border-solid
       border-secondary
       rounded-full
-      px-28
-      py-8
+      w-8/12
+      md:w-1/5
+      py-5
+      md:py-8
       hover:bg-secondary
       hover:text-primary
       hover:font-bold

@@ -14,8 +14,12 @@ const ScalesInfo = () => {
     <ScalesInfoContainer>
       <OtherNamesContainer>
         <p>Other names: </p>
-        {keyState.currentScale.otherNames.map((otherName: any) => (
-          <p>{otherName}</p>
+        {keyState.currentScale.otherNames.map((otherName: any, i: number) => (
+          <p>
+            {i === keyState.currentScale.otherNames.length - 1
+              ? `${otherName}`
+              : `${otherName},`}
+          </p>
         ))}
       </OtherNamesContainer>
       <NotesContainer>
