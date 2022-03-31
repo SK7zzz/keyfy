@@ -18,6 +18,8 @@ export const Selector = styled.select`
   ${tw`
     p-0
     m-0
+    pl-3
+    md:pl-0
     mx-4
     my-2
     md:my-0
